@@ -10,7 +10,7 @@ def index(request):
 def create_customer(request):
     form = CustomerForm()
     if request.method == 'POST':
-        form = CustomerForm(request.POST)
+        form = CustomerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, "Customer added successfully")

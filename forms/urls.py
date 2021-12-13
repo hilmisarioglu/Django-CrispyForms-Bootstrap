@@ -19,6 +19,6 @@ from netflix.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('create_customer', include('netflix.urls')),
+    path('index/', index, name='index'),
+    path('', include('netflix.urls')),
 ]
